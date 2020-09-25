@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="614.0" style="-fx-background-color: green;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="health.expert.system.DiagnosessController">
+    <stylesheets>
+        <URL value="@diagnosess.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="69.0" layoutY="14.0" prefHeight="384.0" prefWidth="499.0" spacing="19.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients Informations" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+               <effect>
+                  <Reflection />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="name" focusColor="GREEN" labelFloat="true" prefHeight="29.0" prefWidth="184.0" promptText="Patients Name" style="-fx-text-inner-color: green; -fx-prompt-text-fill: green;" unFocusColor="#395a07">
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="phone" focusColor="GREEN" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="184.0" promptText="Patients Phone Number" style="-fx-text-inner-color: green; -fx-prompt-text-fill: green;" unFocusColor="#395a07">
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="age" focusColor="GREEN" labelFloat="true" layoutX="10.0" layoutY="39.0" prefHeight="29.0" prefWidth="184.0" promptText="Patients Age" style="-fx-text-inner-color: green; -fx-prompt-text-fill: green;" unFocusColor="#395a07">
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextArea fx:id="address" focusColor="GREEN" prefHeight="30.0" prefWidth="500.0" promptText="Patients Address" style="-fx-text-fill: green; -fx-prompt-text-fill: green;" unFocusColor="#395a07">
+               <opaqueInsets>
+                  <Insets left="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </JFXTextArea>
+            <HBox spacing="10.0">
+               <children>
+                  <JFXRadioButton fx:id="male" text="Male" textFill="GREEN">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="search1" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="female" layoutX="10.0" layoutY="97.0" text="Female" textFill="GREEN">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="search11" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="346.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <children>
+                  <JFXButton layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="69.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: darkslateblue;" text="Save" textFill="#f2f0f0" underline="true" />
+                  <JFXButton layoutX="108.0" layoutY="10.0" prefHeight="27.0" prefWidth="84.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="Clear" textFill="#f2f0f0" underline="true" />
+                  <JFXButton layoutX="21.0" layoutY="16.0" onAction="#next" prefHeight="27.0" prefWidth="69.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="Next&gt;&gt;" textFill="#f2f0f0" underline="true" />
+                  <JFXButton layoutX="214.0" layoutY="16.0" prefHeight="27.0" prefWidth="69.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: red;" text="Cancel" textFill="#f2f0f0" underline="true" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow radius="65.595" spread="0.26" width="243.38" />
+         </effect>
+      </VBox>
+   </children>
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>

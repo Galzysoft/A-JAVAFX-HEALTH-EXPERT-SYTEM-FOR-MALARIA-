@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="470.0" prefWidth="763.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="health.expert.system.ThemainthingController">
+      <children>
+      <StackPane prefHeight="470.0" prefWidth="763.0">
+         <children>
+            <JFXTabPane fx:id="tabpaneeeee" prefHeight="349.0" prefWidth="614.0">
+               <tabs>
+                  <Tab fx:id="home" style="-fx-background-color: green;" text="patient info">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="AnchorPane" layoutX="21.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="413.0" prefWidth="721.0" style="-fx-background-color: green;" styleClass="mainFxmlClass">
+                                 <children>
+                                    <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="257.0" prefWidth="579.0" style="-fx-background-color: green;" styleClass="mainFxmlClass">
+                                       <stylesheets>
+                                          <URL value="@diagnosess.css" />
+                                       </stylesheets>
+                                    </AnchorPane>
+                                    <VBox alignment="CENTER" layoutX="79.0" layoutY="3.0" prefHeight="277.0" prefWidth="446.0" spacing="19.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="3.0">
+                                       <children>
+                                          <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients Informations" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+                                             <effect>
+                                                <Reflection />
+                                             </effect>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField fx:id="name" focusColor="GREEN" labelFloat="true" prefHeight="29.0" prefWidth="184.0" promptText="Patients Name" style="-fx-text-inner-color: green; -fx-prompt-text-fill: green;" unFocusColor="#395a07">
+                                             <padding>
+                                                <Insets left="10.0" top="5.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="phone" focusColor="GREEN" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="184.0" promptText="Patients Phone Number" style="-fx-text-inner-color: green; -fx-prompt-text-fill: green;" unFocusColor="#395a07">
+                                             <padding>
+                                                <Insets left="10.0" top="5.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="age" focusColor="GREEN" labelFloat="true" layoutX="10.0" layoutY="39.0" prefHeight="29.0" prefWidth="184.0" promptText="Patients Age" style="-fx-text-inner-color: green; -fx-prompt-text-fill: green;" unFocusColor="#395a07">
+                                             <padding>
+                                                <Insets left="10.0" top="5.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                          <JFXTextArea fx:id="address" focusColor="GREEN" prefHeight="30.0" prefWidth="500.0" promptText="Patients Address" style="-fx-text-fill: green; -fx-prompt-text-fill: green;" unFocusColor="#395a07">
+                                             <opaqueInsets>
+                                                <Insets left="10.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="10.0" top="5.0" />
+                                             </padding>
+                                          </JFXTextArea>
+                                          <HBox spacing="10.0">
+                                             <children>
+                                                <JFXRadioButton fx:id="male" onAction="#genoo" text="Male" textFill="GREEN" underline="true">
+                                                   <effect>
+                                                      <Lighting>
+                                                         <bumpInput>
+                                                            <Shadow />
+                                                         </bumpInput>
+                                                         <light>
+                                                            <Light.Distant />
+                                                         </light>
+                                                      </Lighting>
+                                                   </effect>
+                                                   <font>
+                                                      <Font size="9.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="gender" />
+                                                   </toggleGroup>
+                                                </JFXRadioButton>
+                                                <JFXRadioButton fx:id="female" layoutX="10.0" layoutY="97.0" onAction="#genoo" text="Female" textFill="GREEN" toggleGroup="$gender" underline="true">
+                                                   <effect>
+                                                      <Lighting>
+                                                         <bumpInput>
+                                                            <Shadow />
+                                                         </bumpInput>
+                                                         <light>
+                                                            <Light.Distant />
+                                                         </light>
+                                                      </Lighting>
+                                                   </effect>
+                                                   <font>
+                                                      <Font size="9.0" />
+                                                   </font>
+                                                </JFXRadioButton>
+                                                <Label fx:id="sel" text="ben" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="2.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="346.0" spacing="200.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+                                             <children>
+                                                <JFXButton layoutX="10.0" layoutY="10.0" onAction="#patient" prefHeight="27.0" prefWidth="69.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: darkslateblue;" text="Save" textFill="#f2f0f0" underline="true" />
+                                                <JFXButton layoutX="108.0" layoutY="10.0" onAction="#clear" prefHeight="27.0" prefWidth="84.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="Clear" textFill="#f2f0f0" underline="true" />
+                                             </children>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <padding>
+                                                <Insets left="10.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow radius="65.595" spread="0.26" width="243.38" />
+                                       </effect>
+                                    </VBox>
+                                 </children>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <stylesheets>
+                                    <URL value="@diagnosess.css" />
+                                 </stylesheets>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tselectsymp" style="-fx-background-color: green;" text="select symptoms">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="AnchorPane" layoutX="21.0" layoutY="34.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="385.0" prefWidth="724.0" style="-fx-background-color: green;" styleClass="mainFxmlClass">
+                                 <children>
+                                    <VBox layoutX="36.0" layoutY="14.0" prefHeight="183.0" prefWidth="339.0" spacing="30.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;">
+                                       <children>
+                                          <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Symptoms" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+                                             <effect>
+                                                <Reflection />
+                                             </effect>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <HBox spacing="20.0">
+                                             <children>
+                                                <JFXCheckBox fx:id="cough" text="Cough" textFill="GREEN" unCheckedColor="#395a07" />
+                                                <JFXCheckBox fx:id="chest" layoutX="20.0" layoutY="20.0" text="Chest Pain" textFill="GREEN" unCheckedColor="#395a07" />
+                                                <JFXCheckBox fx:id="blood" layoutX="91.0" layoutY="20.0" text="Bloody Spatum" textFill="GREEN" unCheckedColor="#395a07" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="59.0" spacing="50.0">
+                                             <children>
+                                                <JFXCheckBox fx:id="shortness" text="Shortness Of Breath" textFill="GREEN" unCheckedColor="#395a07" />
+                                                <JFXCheckBox fx:id="whitetongue" layoutX="20.0" layoutY="20.0" text="White Tongue" textFill="GREEN" unCheckedColor="#395a07" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="346.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+                                             <children>
+                                                <JFXButton layoutX="108.0" layoutY="10.0" prefHeight="27.0" prefWidth="84.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="Clear" textFill="#f2f0f0" underline="true" />
+                                                <JFXButton layoutX="21.0" layoutY="16.0" prefHeight="27.0" prefWidth="69.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="Next&gt;&gt;" textFill="#f2f0f0" underline="true" />
+                                                <JFXButton layoutX="214.0" layoutY="16.0" prefHeight="27.0" prefWidth="69.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: red;" text="Cancel" textFill="#f2f0f0" underline="true" />
+                                             </children>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <padding>
+                                                <Insets left="10.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="111.31" radius="64.4525" spread="0.4" width="148.5" />
+                                       </effect>
+                                    </VBox>
+                                    <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="382.0" prefWidth="725.0" style="-fx-background-color: green;" styleClass="mainFxmlClass">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="93.0" layoutY="75.0" prefHeight="199.0" prefWidth="539.0" spacing="30.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;">
+                                             <children>
+                                                <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Symptoms" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+                                                   <effect>
+                                                      <Reflection />
+                                                   </effect>
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <HBox spacing="20.0">
+                                                   <children>
+                                                      <JFXRadioButton fx:id="cough1" onAction="#cou" text="Cough" textFill="#089a12">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="symptoms" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton fx:id="chest1" layoutX="328.0" layoutY="20.0" onAction="#chest" text="Chest Pain" textFill="#089a12" toggleGroup="$symptoms" />
+                                                      <JFXRadioButton fx:id="blood1" layoutX="229.0" layoutY="20.0" onAction="#blood" text="Bloody Spatum" textFill="#089a12" toggleGroup="$symptoms" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="59.0" spacing="50.0">
+                                                   <children>
+                                                      <JFXRadioButton fx:id="shortness1" onAction="#shortn" text="Shortness Of Breath" textFill="#089a12" toggleGroup="$symptoms" />
+                                                      <JFXRadioButton fx:id="whitetongue1" layoutX="170.0" layoutY="20.0" onAction="#white" text="White Tongue" textFill="#089a12" toggleGroup="$symptoms" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="536.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+                                                   <children>
+                                                      <JFXButton layoutX="21.0" layoutY="16.0" onAction="#previos" prefHeight="27.0" prefWidth="86.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="&lt;&lt;Previous" textFill="#f2f0f0" underline="true" />
+                                                      <JFXButton layoutX="108.0" layoutY="10.0" prefHeight="27.0" prefWidth="84.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="Clear" textFill="#f2f0f0" underline="true" />
+                                                      <JFXButton layoutX="214.0" layoutY="16.0" prefHeight="27.0" prefWidth="69.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: red;" text="Cancel" textFill="#f2f0f0" underline="true" />
+                                                      <JFXButton layoutX="256.0" layoutY="16.0" onAction="#getchest1" prefHeight="27.0" prefWidth="69.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="Next&gt;&gt;" textFill="#f2f0f0" underline="true" />
+                                                   </children>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets left="10.0" top="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                             <effect>
+                                                <DropShadow height="111.31" radius="64.4525" spread="0.4" width="148.5" />
+                                             </effect>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                       <stylesheets>
+                                          <URL value="@diagnosess.css" />
+                                       </stylesheets>
+                                    </AnchorPane>
+                                 </children>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <stylesheets>
+                                    <URL value="@diagnosess.css" />
+                                 </stylesheets>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tcough" style="-fx-background-color: green;" text=" cough">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="436.0" prefWidth="763.0" styleClass="mainFxmlClass">
+                                 <children>
+                                    <VBox layoutX="-7.0" layoutY="-38.0" prefHeight="457.0" prefWidth="763.0" spacing="20.0">
+                                       <children>
+                                          <AnchorPane id="AnchorPane" layoutX="68.0" layoutY="14.0" prefHeight="226.0" prefWidth="743.0" styleClass="mainFxmlClass" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <AnchorPane id="AnchorPane" layoutX="-14.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="226.0" prefWidth="769.0" style="-fx-background-color: green; -fx-background-radius: 0 0 300 300;" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="-2.0">
+                                                   <children>
+                                                      <HBox layoutX="43.0" layoutY="52.0">
+                                                         <children>
+                                                            <AnchorPane layoutX="40.0" layoutY="31.0" prefHeight="104.0" prefWidth="129.0" style="-fx-background-radius: 2000; -fx-border-radius: 200;">
+                                                               <children>
+                                                                  <ImageView fitHeight="70.0" fitWidth="145.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../../MY_IMG_FILES/woman-coughing-into-hand.jpg" />
+                                                                     </image>
+                                                                     <effect>
+                                                                        <Reflection bottomOpacity="0.05" />
+                                                                     </effect>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </AnchorPane>
+                                                            <VBox layoutX="155.0" layoutY="43.0" prefHeight="126.0" prefWidth="450.0" spacing="19.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;">
+                                                               <children>
+                                                                  <HBox alignment="CENTER">
+                                                                     <children>
+                                                                        <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Cough" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+                                                                           <effect>
+                                                                              <Reflection />
+                                                                           </effect>
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                           <VBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </VBox.margin>
+                                                                        </Text>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox spacing="20.0">
+                                                                     <children>
+                                                                        <RadioButton fx:id="lowcough" mnemonicParsing="false" text="Low" textFill="#068a13">
+                                                                           <toggleGroup>
+                                                                              <ToggleGroup fx:id="coughgroup" />
+                                                                           </toggleGroup>
+                                                                        </RadioButton>
+                                                                        <RadioButton fx:id="verylowcough" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Very Low" textFill="#068a13" toggleGroup="$coughgroup" />
+                                                                        <RadioButton fx:id="mediumcough" layoutX="114.0" layoutY="20.0" mnemonicParsing="false" text="Medium" textFill="#068a13" toggleGroup="$coughgroup" />
+                                                                        <RadioButton fx:id="highcough" layoutX="208.0" layoutY="20.0" mnemonicParsing="false" text="High" textFill="#068a13" toggleGroup="$coughgroup" />
+                                                                        <RadioButton fx:id="veryhighcough" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" text="Very High" textFill="#068a13" toggleGroup="$coughgroup" />
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets left="10.0" right="10.0" top="10.0" />
+                                                                     </padding>
+                                                                  </HBox>
+                                                                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="611.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+                                                                     <children>
+                                                                        <JFXButton layoutX="21.0" layoutY="16.0" onAction="#getcough" prefHeight="27.0" prefWidth="134.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="Select Symptoms" textFill="#f2f0f0" underline="true" />
+                                                                        <JFXButton layoutX="181.0" layoutY="16.0" onAction="#coughlevel" prefHeight="27.0" prefWidth="103.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="View Diagnosis" textFill="#f2f0f0" underline="true" />
+                                                                     </children>
+                                                                     <effect>
+                                                                        <DropShadow />
+                                                                     </effect>
+                                                                     <padding>
+                                                                        <Insets left="10.0" top="5.0" />
+                                                                     </padding>
+                                                                  </HBox>
+                                                               </children>
+                                                               <effect>
+                                                                  <DropShadow height="111.31" radius="64.4525" spread="0.4" width="148.5" />
+                                                               </effect>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <effect>
+                                                      <Lighting>
+                                                         <bumpInput>
+                                                            <Shadow />
+                                                         </bumpInput>
+                                                         <light>
+                                                            <Light.Distant />
+                                                         </light>
+                                                      </Lighting>
+                                                   </effect>
+                                                   <stylesheets>
+                                                      <URL value="@diagnosess.css" />
+                                                   </stylesheets>
+                                                </AnchorPane>
+                                             </children>
+                                             <stylesheets>
+                                                <URL value="@themainthing.css" />
+                                             </stylesheets>
+                                          </AnchorPane>
+                                          <JFXTextArea fx:id="coughdiognoses" focusColor="#076b0b" labelFloat="true" layoutX="3.0" layoutY="169.0" prefHeight="138.0" prefWidth="604.0" promptText="View Diagnosis" style="-fx-text-fill: green;" unFocusColor="#044606">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow />
+                                                   </bumpInput>
+                                                   <light>
+                                                      <Light.Distant />
+                                                   </light>
+                                                </Lighting>
+                                             </effect>
+                                          </JFXTextArea>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" top="20.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@level_ofsick.css" />
+                                 </stylesheets>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tchest" style="-fx-background-color: green;" text=" chest pain">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="312.0" prefWidth="614.0" styleClass="mainFxmlClass">
+                                 <children>
+                                    <AnchorPane id="AnchorPane" layoutX="-2.0" prefHeight="165.0" prefWidth="616.0" styleClass="mainFxmlClass">
+                                       <children>
+                                          <AnchorPane id="AnchorPane" layoutX="14.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="257.0" prefWidth="434.0" style="-fx-background-color: green;" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="9.0">
+                                             <children>
+                                                <ImageView fitHeight="165.0" fitWidth="133.0" layoutX="-4.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../MY_IMG_FILES/194x105_bronchitis.jpg" />
+                                                   </image>
+                                                   <effect>
+                                                      <Reflection />
+                                                   </effect>
+                                                </ImageView>
+                                                <VBox layoutX="140.0" layoutY="14.0" prefHeight="126.0" prefWidth="400.0" spacing="19.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;">
+                                                   <children>
+                                                      <HBox alignment="CENTER">
+                                                         <children>
+                                                            <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Chest Pain" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+                                                               <effect>
+                                                                  <Reflection />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox spacing="20.0">
+                                                         <children>
+                                                            <RadioButton fx:id="lowchest" mnemonicParsing="false" text="Low" textFill="#068a13">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="chestgroup" />
+                                                               </toggleGroup></RadioButton>
+                                                            <RadioButton fx:id="verylowchest" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Very Low" textFill="#068a13" toggleGroup="$chestgroup" />
+                                                            <RadioButton fx:id="mediumchest" layoutX="114.0" layoutY="20.0" mnemonicParsing="false" text="Medium" textFill="#068a13" toggleGroup="$chestgroup" />
+                                                            <RadioButton fx:id="highchest" layoutX="208.0" layoutY="20.0" mnemonicParsing="false" text="High" textFill="#068a13" toggleGroup="$chestgroup" />
+                                                            <RadioButton fx:id="veryhighchest" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" text="Very High" textFill="#068a13" toggleGroup="$chestgroup" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="401.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+                                                         <children>
+                                                            <JFXButton layoutX="21.0" layoutY="16.0" onAction="#getchest" prefHeight="27.0" prefWidth="124.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="Select Symptoms" textFill="#f2f0f0" underline="true" />
+                                                            <JFXButton layoutX="181.0" layoutY="16.0" onAction="#chestlevel" prefHeight="27.0" prefWidth="103.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="View Diagnosis" textFill="#f2f0f0" underline="true" />
+                                                         </children>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                         <padding>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </children>
+                                                   <effect>
+                                                      <DropShadow height="111.31" radius="64.4525" spread="0.4" width="148.5" />
+                                                   </effect>
+                                                </VBox>
+                                             </children>
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow />
+                                                   </bumpInput>
+                                                   <light>
+                                                      <Light.Distant />
+                                                   </light>
+                                                </Lighting>
+                                             </effect>
+                                             <stylesheets>
+                                                <URL value="@diagnosess.css" />
+                                             </stylesheets>
+                                          </AnchorPane>
+                                       </children>
+                                       <stylesheets>
+                                          <URL value="@themainthing.css" />
+                                       </stylesheets>
+                                    </AnchorPane>
+                                    <JFXTextArea fx:id="chestdiagnosis" focusColor="#076b0b" labelFloat="true" layoutX="3.0" layoutY="172.0" prefHeight="132.0" prefWidth="605.0" promptText="View Diagnosis" style="-fx-text-fill: green;" unFocusColor="#044606">
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </JFXTextArea>
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@level_ofsick.css" />
+                                 </stylesheets>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tblood" style="-fx-background-color: green;" text="bloodspatum">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="313.0" prefWidth="621.0" styleClass="mainFxmlClass">
+                                 <children>
+                                    <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="165.0" prefWidth="622.0" styleClass="mainFxmlClass">
+                                       <children>
+                                          <AnchorPane id="AnchorPane" layoutX="14.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="257.0" prefWidth="434.0" style="-fx-background-color: green;" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="9.0">
+                                             <children>
+                                                <VBox layoutX="123.0" layoutY="14.0" prefHeight="126.0" prefWidth="400.0" spacing="19.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;">
+                                                   <children>
+                                                      <HBox alignment="CENTER">
+                                                         <children>
+                                                            <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Spatum" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+                                                               <effect>
+                                                                  <Reflection />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox spacing="20.0">
+                                                         <children>
+                                                            <RadioButton fx:id="lowblood" mnemonicParsing="false" text="Low" textFill="#068a13">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="bloodgroup" />
+                                                               </toggleGroup></RadioButton>
+                                                            <RadioButton fx:id="verylowblood" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Very Low" textFill="#068a13" toggleGroup="$bloodgroup" />
+                                                            <RadioButton fx:id="mediumblood" layoutX="114.0" layoutY="20.0" mnemonicParsing="false" text="Medium" textFill="#068a13" toggleGroup="$bloodgroup" />
+                                                            <RadioButton fx:id="highbood" layoutX="208.0" layoutY="20.0" mnemonicParsing="false" text="High" textFill="#068a13" toggleGroup="$bloodgroup" />
+                                                            <RadioButton fx:id="veryhighblood" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" text="Very High" textFill="#068a13" toggleGroup="$bloodgroup" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="401.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+                                                         <children>
+                                                            <JFXButton layoutX="21.0" layoutY="16.0" onAction="#getblood" prefHeight="27.0" prefWidth="128.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="Select Symptoms" textFill="#f2f0f0" underline="true" />
+                                                            <JFXButton layoutX="181.0" layoutY="16.0" onAction="#bloodlevel" prefHeight="27.0" prefWidth="103.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="View Diagnosis" textFill="#f2f0f0" underline="true" />
+                                                         </children>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                         <padding>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </children>
+                                                   <effect>
+                                                      <DropShadow height="111.31" radius="64.4525" spread="0.4" width="148.5" />
+                                                   </effect>
+                                                </VBox>
+                                                <ImageView fitHeight="105.0" fitWidth="130.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../MY_IMG_FILES/194x105_Peptic_Ulcer.jpg" />
+                                                   </image>
+                                                   <effect>
+                                                      <Reflection />
+                                                   </effect>
+                                                </ImageView>
+                                             </children>
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow />
+                                                   </bumpInput>
+                                                   <light>
+                                                      <Light.Distant />
+                                                   </light>
+                                                </Lighting>
+                                             </effect>
+                                             <stylesheets>
+                                                <URL value="@diagnosess.css" />
+                                             </stylesheets>
+                                          </AnchorPane>
+                                       </children>
+                                       <stylesheets>
+                                          <URL value="@themainthing.css" />
+                                       </stylesheets>
+                                    </AnchorPane>
+                                    <HBox layoutX="1.0" layoutY="167.0" prefHeight="137.0" prefWidth="614.0">
+                                       <children>
+                                          <JFXTextArea fx:id="blooddiagnosis" focusColor="#076b0b" labelFloat="true" layoutX="3.0" layoutY="197.0" prefHeight="107.0" prefWidth="606.0" promptText="View Diagnosis" style="-fx-text-fill: green;" unFocusColor="#044606" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow />
+                                                   </bumpInput>
+                                                   <light>
+                                                      <Light.Distant />
+                                                   </light>
+                                                </Lighting>
+                                             </effect>
+                                          </JFXTextArea>
+                                       </children>
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </HBox>
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@level_ofsick.css" />
+                                 </stylesheets>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tshort" style="-fx-background-color: green;" text=" shortnesss">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="273.0" prefWidth="614.0" styleClass="mainFxmlClass">
+                                 <children>
+                                    <AnchorPane id="AnchorPane" layoutX="2.0" prefHeight="165.0" prefWidth="614.0" styleClass="mainFxmlClass">
+                                       <children>
+                                          <AnchorPane id="AnchorPane" layoutX="14.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="257.0" prefWidth="434.0" style="-fx-background-color: green;" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="9.0">
+                                             <children>
+                                                <VBox layoutX="143.0" layoutY="14.0" prefHeight="126.0" prefWidth="400.0" spacing="19.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;">
+                                                   <children>
+                                                      <HBox alignment="CENTER">
+                                                         <children>
+                                                            <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="Shortness of Breath" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+                                                               <effect>
+                                                                  <Reflection />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox spacing="20.0">
+                                                         <children>
+                                                            <RadioButton fx:id="lowshort" mnemonicParsing="false" text="Low" textFill="#068a13">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="shortgroup" />
+                                                               </toggleGroup></RadioButton>
+                                                            <RadioButton fx:id="verylowshort" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Very Low" textFill="#068a13" toggleGroup="$shortgroup" />
+                                                            <RadioButton fx:id="mediumshort" layoutX="114.0" layoutY="20.0" mnemonicParsing="false" text="Medium" textFill="#068a13" toggleGroup="$shortgroup" />
+                                                            <RadioButton fx:id="highshort" layoutX="208.0" layoutY="20.0" mnemonicParsing="false" text="High" textFill="#068a13" toggleGroup="$shortgroup" />
+                                                            <RadioButton fx:id="veryhighshort" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" text="Very High" textFill="#068a13" toggleGroup="$shortgroup" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="401.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+                                                         <children>
+                                                            <JFXButton layoutX="21.0" layoutY="16.0" onAction="#getshort" prefHeight="27.0" prefWidth="112.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="Select Symptoms" textFill="#f2f0f0" underline="true" />
+                                                            <JFXButton layoutX="181.0" layoutY="16.0" onAction="#shortlevel" prefHeight="27.0" prefWidth="103.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="View Diagnosis" textFill="#f2f0f0" underline="true" />
+                                                         </children>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                         <padding>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </children>
+                                                   <effect>
+                                                      <DropShadow height="111.31" radius="64.4525" spread="0.4" width="148.5" />
+                                                   </effect>
+                                                </VBox>
+                                                <ImageView fitHeight="147.0" fitWidth="134.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../MY_IMG_FILES/70176492_m-e1493025915341.jpg" />
+                                                   </image>
+                                                   <effect>
+                                                      <Reflection />
+                                                   </effect>
+                                                </ImageView>
+                                             </children>
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow />
+                                                   </bumpInput>
+                                                   <light>
+                                                      <Light.Distant />
+                                                   </light>
+                                                </Lighting>
+                                             </effect>
+                                             <stylesheets>
+                                                <URL value="@diagnosess.css" />
+                                             </stylesheets>
+                                          </AnchorPane>
+                                       </children>
+                                       <stylesheets>
+                                          <URL value="@themainthing.css" />
+                                       </stylesheets>
+                                    </AnchorPane>
+                                    <JFXTextArea fx:id="sgortdiagnosis" focusColor="#076b0b" labelFloat="true" layoutX="3.0" layoutY="166.0" prefHeight="144.0" prefWidth="614.0" promptText="View Diagnosis" style="-fx-text-fill: green;" unFocusColor="#044606">
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </JFXTextArea>
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@level_ofsick.css" />
+                                 </stylesheets>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="twhite" style="-fx-background-color: green;" text="white tongue">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="303.0" prefWidth="614.0" styleClass="mainFxmlClass">
+                                 <children>
+                                    <AnchorPane id="AnchorPane" prefHeight="165.0" prefWidth="614.0" styleClass="mainFxmlClass">
+                                       <children>
+                                          <AnchorPane id="AnchorPane" layoutX="14.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="257.0" prefWidth="434.0" style="-fx-background-color: green;" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="9.0">
+                                             <children>
+                                                <VBox layoutX="150.0" layoutY="14.0" prefHeight="126.0" prefWidth="400.0" spacing="19.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white; -fx-border-width: 8;">
+                                                   <children>
+                                                      <HBox alignment="CENTER">
+                                                         <children>
+                                                            <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="White Tongue" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+                                                               <effect>
+                                                                  <Reflection />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox spacing="20.0">
+                                                         <children>
+                                                            <RadioButton fx:id="lowwhite" mnemonicParsing="false" text="Low" textFill="#068a13">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="whitegroup" />
+                                                               </toggleGroup></RadioButton>
+                                                            <RadioButton fx:id="verylowwhite" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Very Low" textFill="#068a13" toggleGroup="$whitegroup" />
+                                                            <RadioButton fx:id="mediumwhite" layoutX="114.0" layoutY="20.0" mnemonicParsing="false" text="Medium" textFill="#068a13" toggleGroup="$whitegroup" />
+                                                            <RadioButton fx:id="highwhite" layoutX="208.0" layoutY="20.0" mnemonicParsing="false" text="High" textFill="#068a13" toggleGroup="$whitegroup" />
+                                                            <RadioButton fx:id="veryhighwhite" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" text="Very High" textFill="#068a13" toggleGroup="$whitegroup" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="401.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-background-radius: white; -fx-border-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+                                                         <children>
+                                                            <JFXButton layoutX="21.0" layoutY="16.0" onAction="#getwhite" prefHeight="27.0" prefWidth="113.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: orange;" text="Select Symptoms" textFill="#f2f0f0" underline="true" />
+                                                            <JFXButton layoutX="181.0" layoutY="16.0" onAction="#whitelevel" prefHeight="27.0" prefWidth="103.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="View Diagnosis" textFill="#f2f0f0" underline="true" />
+                                                         </children>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                         <padding>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </children>
+                                                   <effect>
+                                                      <DropShadow height="111.31" radius="64.4525" spread="0.4" width="148.5" />
+                                                   </effect>
+                                                </VBox>
+                                                <ImageView fitHeight="127.0" fitWidth="142.0" layoutX="-3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../MY_IMG_FILES/388x210_Psoriasis_on_the_Tongue.jpg" />
+                                                   </image>
+                                                   <effect>
+                                                      <Reflection />
+                                                   </effect>
+                                                </ImageView>
+                                             </children>
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow />
+                                                   </bumpInput>
+                                                   <light>
+                                                      <Light.Distant />
+                                                   </light>
+                                                </Lighting>
+                                             </effect>
+                                             <stylesheets>
+                                                <URL value="@diagnosess.css" />
+                                             </stylesheets>
+                                          </AnchorPane>
+                                       </children>
+                                       <stylesheets>
+                                          <URL value="@themainthing.css" />
+                                       </stylesheets>
+                                    </AnchorPane>
+                                    <JFXTextArea fx:id="whitediagnosis" focusColor="#076b0b" labelFloat="true" layoutX="3.0" layoutY="167.0" prefHeight="137.0" prefWidth="608.0" promptText="View Diagnosis" style="-fx-text-fill: green;" unFocusColor="#044606">
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </JFXTextArea>
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@level_ofsick.css" />
+                                 </stylesheets>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </StackPane>
+      <HBox prefHeight="37.0" prefWidth="763.0" style="-fx-background-color: green;">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>
